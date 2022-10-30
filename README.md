@@ -1,16 +1,13 @@
-# Node load test
-Making a simple system to work with load test in specific situations.
-
-<br>
-
 ### How is it supposed to work?
-<br>
 Well... <br>
-I'm gonna try to test how Node.js handle with stress tests in different situations, such as doing heavy operations on the database. I'll make a load test having the project configured with different features and see how Node.js reacts.
+I'm making an small shop system, where any user can make orders with many products into it. <br>
+The main idea is: create the application following the DDD and TDD patterns, and then, try different
+features to see how the server performance reacts and which feature is better to this situation through a load test.
+
 
 <br>
 
-### Patterns and platforms
+### Used patterns and platforms
 - `DDD`: I'll try to write the simple structure based on some DDD principles.
 - `SOLID`
 - `TDD`: I'll be loyal to this pattern and use the best practices.
@@ -19,3 +16,8 @@ I'm gonna try to test how Node.js handle with stress tests in different situatio
 - `Typescript`
 - `Vitest`: To make unit and functional tests.
 - `Autocannon`: Used to make load tests.
+
+<br>
+
+### Database schema
+<img src=".github/assets/database-schema.png" alt="Database schema">
