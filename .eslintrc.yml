@@ -11,6 +11,8 @@ parserOptions:
   sourceType: module
 plugins:
   - '@typescript-eslint'
+  - eslint-plugin-import-helpers
+  - import
 rules:
   indent:
     - error
@@ -24,3 +26,21 @@ rules:
   semi:
     - error
     - always
+  import/resolver:
+    - node:
+      - extensions: [".js", ".ts"]
+  import-helpers/order-imports:
+    - warn
+    - newLinesBetween: always
+      groups:
+        - module
+        - /^~shared/
+        - /^~docs/
+        - /^~modules/
+        - /^~/
+        - - parent
+          - sibling
+          - index
+      alphabetize:
+        order: asc
+        ignoreCase: true
