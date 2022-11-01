@@ -26,5 +26,31 @@ describe('user entity', () => {
     }).toThrowError('Required field not provided.');
   });
 
-  
+  it('should be able to update the user`s name', () => {
+    const id = randomUUID();
+    const name = randFirstName();
+    const email = randEmail();
+
+    const newName = name + 'new';
+
+    const user = new User(id, name, email);
+
+    user.updateName(newName);
+
+    expect(user.name).toBe(newName);
+  });
+
+  it('should be able to update the user`s phone', () => {
+    const id = randomUUID();
+    const name = randFirstName();
+    const email = randEmail();
+
+    const newPhone = randPhoneNumber();
+
+    const user = new User(id, name, email);
+
+    user.updatePhone(newPhone);
+
+    expect(user.phone).toBe(newPhone);
+  });
 });
