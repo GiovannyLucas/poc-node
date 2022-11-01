@@ -15,4 +15,16 @@ describe('user entity', () => {
     
     expect(user).toBeInstanceOf(User);
   });
+
+  it('should not be able to create a new user entity not passing required fields', () => {
+    const id = randomUUID();
+    const name = '';
+    const email = '';
+    
+    expect(() => {
+      new User(id, name, email);
+    }).toThrowError('Required field not provided.');
+  });
+
+  
 });
